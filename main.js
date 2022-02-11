@@ -21,23 +21,35 @@ class Tablero {
 
 
     }
-    // return tableroAlto;
 
-    this.imprimirTablero(tableroAlto);
+    //return tableroAlto;
+
+    // console.log(this.imprimirTablero(tableroAlto));
+    // console.log(this.imprimirTablero(tableroAlto).length);
   }
 
   imprimirTablero(tableroAlto) {
-    
+      
+    let linea = '';
+    // var conteo = 0;
+
+    // console.log(tableroAlto.length);
     for (let i=0; i < tableroAlto.length; i++){
-        var linea = tableroAlto[i].toString();
-        console.log(linea.replace(/,/g," "))
+        // conteo += tableroAlto[i].lenght;
+        linea += tableroAlto[i].toString();
+
+        /* importante */
+        // console.log(linea.replace(/,/g," "));
+
+        linea = linea.replace(/,/g,"");
     }
-        
-
-  }
-
-  
+    return linea;
+    //console.log(linea);
+  }  
 }
 
 const tablero = new Tablero(4, 8);
-console.log(tablero);
+ //console.log(tablero);
+
+
+module.exports = Tablero;
